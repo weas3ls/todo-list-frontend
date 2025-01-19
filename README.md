@@ -76,11 +76,6 @@ DELETE /tasks/:id: Delete a task.
 
 ### Known Issues
 
-API Errors:
-
-Currently, errors are displayed as alerts. Improve error handling with toast
-notifications.
-
 Pagination:
 
 The task list does not support pagination, which could impact performance with a
