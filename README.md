@@ -66,7 +66,33 @@ The app communicates with the backend API for tasks:
 
 ```bash
 GET /tasks: Fetch all tasks.
+GET /task/:id: Fetch an existing task.
 POST /tasks: Create a new task.
 PUT /tasks/:id: Update an existing task.
 DELETE /tasks/:id: Delete a task.
 ```
+
+## Known Issues & Future Enhancements
+
+### Known Issues
+
+API Errors:
+
+Currently, errors are displayed as alerts. Improve error handling with toast
+notifications.
+
+Pagination:
+
+The task list does not support pagination, which could impact performance with a
+large number of tasks.
+
+### Future Enhancements
+
+- Add user authentication for managing tasks.
+- Add support for filtering tasks by color, completion status, or due date.
+- Improve the UI for mobile responsiveness. Add drag-and-drop functionality for
+  reordering tasks.
+
+## License
+
+This project is licensed under the MIT License.
