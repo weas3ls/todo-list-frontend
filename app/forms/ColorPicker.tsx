@@ -26,14 +26,14 @@ const ColorPicker: React.FC<ColorPickerProps> = ({
     ];
 
     return (
-        <div className="flex gap-4">
+        <div className="flex flex-wrap gap-4 lg:flex-nowrap">
             {colors.map(color => (
                 <button
                     type="button"
                     key={color}
                     className={`h-14 w-14 rounded-full ${color} ${
                         selectedColor === color
-                            ? "ring-1 ring-white ring-offset-2"
+                            ? "ring-2 ring-white ring-offset-2"
                             : ""
                     }`}
                     onClick={() => onSelectColor(color)}

@@ -76,6 +76,13 @@ DELETE /tasks/:id: Delete a task.
 
 ### Known Issues
 
+API Error:
+
+When refreshing the page while editing a task, the application fails to retrieve
+the task from the API. This issue arises because the `taskId` parameter is
+extracted from the route synchronously, whereas the API call to fetch the task
+data is asynchronous.
+
 Pagination:
 
 The task list does not support pagination, which could impact performance with a
