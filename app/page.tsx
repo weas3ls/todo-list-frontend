@@ -1,18 +1,19 @@
 import Link from "next/link";
 
+import React from "react";
 import { HiOutlinePlusCircle } from "react-icons/hi";
 
 import Button from "@/components/Button";
 import Tasks from "@/components/Tasks";
-import Task from "@/util/Task";
 
 export default async function Home() {
-    const data = await fetch("http://localhost:3000/tasks");
-    const tasks: Array<Task> = await data.json();
-
     return (
-        <>
-            <Button className="absolute -top-6 z-10">
+        <React.Fragment>
+            <Button
+                className="absolute -top-6 z-10"
+                type="button"
+                disabled={false}
+            >
                 <Link href={"/tasks/create"}>
                     <span className="flex items-center justify-center gap-2 text-xl">
                         Create Task <HiOutlinePlusCircle />
@@ -20,7 +21,7 @@ export default async function Home() {
                 </Link>
             </Button>
             <div className="mt-10"></div>
-            <Tasks tasks={tasks} />
-        </>
+            <Tasks />
+        </React.Fragment>
     );
 }

@@ -18,7 +18,9 @@ const TasksInfo = ({
             <h1 className="font-bold text-[#8284FA]">
                 <span className="flex items-center gap-[10px]">
                     Completed
-                    <Badge>{completed}</Badge>
+                    <Badge>
+                        {completed} of {tasks}
+                    </Badge>
                 </span>
             </h1>
         </div>
